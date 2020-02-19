@@ -1,11 +1,11 @@
-const path = require(`path`)
+const path = require(`path`);
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   return graphql(`
     query MyQuery {
-      allRemoteImage {
+      allImageSharp {
         totalCount
         nodes {
           id
@@ -13,14 +13,14 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `).then(results => {
-    results.data.allRemoteImage.nodes.map(n => {
+    results.data.allImageSharp.nodes.map(n => {
       createPage({
         path: `/${n.id}/`,
         component: path.resolve(`./src/templates/image.js`),
         context: {
           id: n.id,
         },
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};
