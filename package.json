@@ -25,7 +25,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "bench": "set -x; gatsby clean; NUM_PAGES=${NUM_PAGES:-2000} gatsby build",
     "build": "gatsby-parallel-runner",
     "develop": "gatsby develop",
     "start": "npm run develop",
