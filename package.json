@@ -8,6 +8,7 @@
     "async-sema": "^3.1.0",
     "gatsby": "^2.19.5",
     "gatsby-image": "^2.2.39",
+    "gatsby-parallel-runner": "^1.1.1",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-source-filesystem": "^2.1.46",
@@ -28,7 +29,7 @@
   "license": "MIT",
   "scripts": {
     "bench": "set -x; gatsby clean; NUM_PAGES=${NUM_PAGES:-2000} gatsby build",
-    "build": "gatsby build",
+    "build": "gatsby-parallel-runner",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
