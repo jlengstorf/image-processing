@@ -20,7 +20,7 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    allImageSharp {
+    allImageSharp(limit: 10000) {
       totalCount
       nodes {
         id

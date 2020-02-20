@@ -5,7 +5,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     query MyQuery {
-      allImageSharp {
+      allImageSharp(limit: 10000) {
         totalCount
         nodes {
           id
