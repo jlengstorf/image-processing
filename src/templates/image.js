@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import Layout from '../components/layout';
 
 export default props => (
-  <div>
+  <Layout>
     <Link to="/">Home</Link>
     <br />
     <Img fixed={props.data.imageSharp.fixed} />
-  </div>
+  </Layout>
 );
 
 export const query = graphql`
