@@ -7,7 +7,6 @@
   "dependencies": {
     "gatsby": "^2.19.5",
     "gatsby-image": "^2.2.39",
-    "gatsby-parallel-runner": "^1.1.1",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-source-filesystem": "^2.1.46",
@@ -19,7 +18,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby-parallel-runner",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",

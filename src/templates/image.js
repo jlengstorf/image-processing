@@ -5,9 +5,12 @@ import Layout from '../components/layout';
 
 export default props => (
   <Layout>
-    <Link to="/">Home</Link>
-    <br />
-    <Img fixed={props.data.imageSharp.fixed} />
+    <p>
+      <Link to="/">Home</Link>
+    </p>
+    <p>
+      <Img fluid={props.data.imageSharp.fluid} />
+    </p>
   </Layout>
 );
 
@@ -15,8 +18,8 @@ export const query = graphql`
   query($id: String!) {
     imageSharp(id: { eq: $id }) {
       id
-      fixed(width: 500, height: 500) {
-        ...GatsbyImageSharpFixed
+      fluid {
+        ...GatsbyImageSharpFluid
       }
     }
   }
