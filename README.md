@@ -1,5 +1,8 @@
 # Parallelized Image Processing in Gatsby
 
+- [Read the `gatsby-parallel-runner` announcement post from Matt Biilmann](https://dev.to/biilmann/open-source-parallel-processing-for-gatsby-270d)
+- [Read the tutorial for adding parallel image processing to your Netlify site](https://www.netlify.com/blog/2020/02/25/gatsby-build-speed-improvements-with-parallel-image-processing/?utm_source=github&utm_medium=gatsby-parallel-images-jl&utm_campaign=devex)
+
 This site is designed to make Gatsby work _really_ hard to process images. To do that, it:
 
 1. Has 200+ images ranging from 1–5MB committed to the repo to put additional memory strain on Sharp
@@ -12,7 +15,16 @@ The goal of this repo is to show the benefits of using the parallel processing e
 
 ## Setup and Installation
 
-If you’d like to run this demo yourself, follow these steps:
+If you’d like to run this demo yourself, we _highly_ recommend using Netlify instead of running this locally.
+
+Why? A couple reasons:
+
+1. This is a _huge_ repo, and it'll burn a lot of bandwidth to download it
+2. The benefits are limited by the speed of your internet connection, so if you're not on a fiber connection, it may not seem like this is much faster — but data centers are on _very_ fast connections
+
+See [the tutorial](https://dev.to/biilmann/open-source-parallel-processing-for-gatsby-270d) to get a walkthrough of how to set this repo up on Netlify with parallel processing.
+
+That being said, you can definitely run this demo locally by following these steps.
 
 ### 1. Fork this repo
 
